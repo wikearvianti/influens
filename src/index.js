@@ -4,6 +4,7 @@ import './Styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './Router';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
 import { BrowserRouter,Route } from "react-router-dom";
 
 ReactDOM.render(
