@@ -1,0 +1,28 @@
+.mainColor  {
+    color: #fff!important;
+    background-color: darkviolet!important;
+    border-color: none!important;
+}
+
+.mainColor:hover {
+    background-color: darkslateblue!important;
+}
+
+.secondary {
+    color: darkviolet!important;
+    border-color: darkviolet!important;
+}
+
+.secondary:hover {
+    color: #fff!important;
+    background-color: darkviolet!important;
+    border-color: none!important;
+}
+
+.colorLink{
+    color: darkviolet!important;
+}
+
+.colorLink:hover {
+    color: darkslateblue!important;
+}
