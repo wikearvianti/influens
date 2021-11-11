@@ -7,7 +7,7 @@ export default function Card({src, top, nama, jenis, fllwr}) {
       <div className="card h-100 hover-shadow">
         <img
           src={src}
-          className="tinggi card-img"
+          className="tinggi card-img img-card"
           alt="Card Influencer"
         />
         {top ? (
