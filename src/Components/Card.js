@@ -4,7 +4,7 @@ import "./styles/card.css";
 export default function Card({src, top, nama, jenis, fllwr}) {
   return (
     <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-      <div className="card h-100 hover-shadow">
+      <div className="card cardD h-100 hover-shadow">
         <img
           src={src}
           className="tinggi card-img img-card"
