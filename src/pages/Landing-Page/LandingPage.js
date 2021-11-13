@@ -11,10 +11,11 @@ import ajukan from "./Assets/ajukan.svg";
 import pilih from "./Assets/pilih.svg";
 import tunggu from "./Assets/tunggu.svg";
 import Card from "../../Components/Card";
+import Layouts from "../../Layout";
 
 export default function LandingPage() {
   return (
-    <div>
+    <Layouts>
       <div className="container-fluid bg-light">
         <div className="container heightHero d-flex align-items-center">
           <div className="row align-items-center">
@@ -157,6 +158,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-    </div>
+    </Layouts>
   );
 }
