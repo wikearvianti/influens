@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../Assets/Group.svg";
 import Layouts from "../../Layout";
 import { useForm } from "react-hook-form";
-import ModalComponent from "../../Components/Modal"
+import ModalComponent from "../../Components/Modal";
 import { useNavigate } from "react-router";
 
 function SaveDataToLocalStorage(data) {
@@ -12,22 +12,54 @@ function SaveDataToLocalStorage(data) {
   localStorage.setItem("history", JSON.stringify(a));
 }
 
+function getDate() {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const getdate = new Date();
+
+  const month = months[getdate.getMonth()];
+  const date = getdate.getDate();
+  const year = getdate.getFullYear();
+
+  const result = `${date} ${month} ${year}`
+  let objResult = { date: result };
+  return objResult
+}
+
 export default function FormPengajuan() {
-  const [modal, setModal] = useState(false)
-  const navigate = useNavigate()
+  let userData = JSON.parse(localStorage.getItem("userData"));
+  const [modal, setModal] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
+
+
   const onSubmit = (data) => {
-    SaveDataToLocalStorage(data)
-    setModal(true)
+    const dateFix = getDate()
+    const nameInfluencer = userData.name
+    const addDate = { ...data, ...dateFix, ...nameInfluencer};
+    SaveDataToLocalStorage(addDate);
+    setModal(true);
     setTimeout(() => {
-      navigate("/")
+      navigate("/");
     }, 3000);
   };
-  
+
   return (
     <Layouts>
       <div className="container my-5">
@@ -36,8 +68,7 @@ export default function FormPengajuan() {
           <form
             className="row g-5"
             noValidate
-            onSubmit={handleSubmit(onSubmit)
-            }
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div className="col-12">
               <div className="g-3 row">
@@ -70,16 +101,20 @@ export default function FormPengajuan() {
                     className={
                       errors?.NIK ? "is-invalid form-control" : "form-control"
                     }
-                    {...register("NIK", { required: true , minLength: 16})}
+                    {...register("NIK", { required: true, minLength: 16 })}
                   />
                   <div className="invalid-feedback">
-                    {errors.NIK &&
-                      errors.NIK.type === "required" || "minLength" ?
-                      "NIK belum terisi atau Kurang dari 16" : null}
+                    {(errors.NIK && errors.NIK.type === "required") ||
+                    "minLength"
+                      ? "NIK belum terisi atau Kurang dari 16"
+                      : null}
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="validationDefaultUsername" className="form-label">
+                  <label
+                    htmlFor="validationDefaultUsername"
+                    className="form-label"
+                  >
                     Email
                   </label>
                   <div className="input-group">
@@ -90,12 +125,16 @@ export default function FormPengajuan() {
                           ? "is-invalid form-control"
                           : "form-control"
                       }
-                      {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
+                      {...register("email", {
+                        required: true,
+                        pattern: /^\S+@\S+\.\S+$/,
+                      })}
                     />
                     <div className="invalid-feedback">
-                      {errors.email &&
-                      errors.email.type === "required" || "minLength" ?
-                      "email tidak valid" : null}
+                      {(errors.email && errors.email.type === "required") ||
+                      "minLength"
+                        ? "email tidak valid"
+                        : null}
                     </div>
                   </div>
                 </div>
@@ -189,7 +228,7 @@ export default function FormPengajuan() {
                     Bidang Usaha
                   </label>
                   <select
-                     className={
+                    className={
                       errors?.bidang ? "is-invalid form-select" : "form-select"
                     }
                     {...register("bidang", { required: true })}
@@ -221,7 +260,9 @@ export default function FormPengajuan() {
                   <input
                     type="text"
                     className={
-                      errors?.address ? "is-invalid form-control" : "form-control"
+                      errors?.address
+                        ? "is-invalid form-control"
+                        : "form-control"
                     }
                     {...register("address", { required: true })}
                   />
@@ -235,22 +276,27 @@ export default function FormPengajuan() {
                 <div className="col-md-6" />
 
                 <div className="col-md-6">
-                  <label htmlFor="validationDefaultUsername" className="form-label">
+                  <label
+                    htmlFor="validationDefaultUsername"
+                    className="form-label"
+                  >
                     Tahun Berdiri
                   </label>
                   <div className="input-group">
                     <input
                       type="number"
                       className={
-                        errors?.tahun ? "is-invalid form-control" : "form-control"
+                        errors?.tahun
+                          ? "is-invalid form-control"
+                          : "form-control"
                       }
                       {...register("tahun", { required: true })}
                     />
                     <div className="invalid-feedback">
-                    {errors.tahun &&
-                      errors.tahun.type === "required" &&
-                      "Tahun berdiri belum terisi"}
-                  </div>
+                      {errors.tahun &&
+                        errors.tahun.type === "required" &&
+                        "Tahun berdiri belum terisi"}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -263,7 +309,9 @@ export default function FormPengajuan() {
                   type="checkbox"
                   id="invalidCheck2"
                   className={
-                    errors?.agreement ? "is-invalid form-check-input" : "form-check-input"
+                    errors?.agreement
+                      ? "is-invalid form-check-input"
+                      : "form-check-input"
                   }
                   {...register("agreement", { required: true })}
                 />
@@ -274,10 +322,10 @@ export default function FormPengajuan() {
                   saya menyetujui persyaratan dan ketentuan influens
                 </label>
                 <div className="invalid-feedback">
-                    {errors.agreement &&
-                      errors.agreement.type === "required" &&
-                      "Kamu harus menyetujui"}
-                  </div>
+                  {errors.agreement &&
+                    errors.agreement.type === "required" &&
+                    "Kamu harus menyetujui"}
+                </div>
               </div>
               <button
                 className="btn rounded-pill mainColor"
@@ -290,12 +338,8 @@ export default function FormPengajuan() {
           </form>
         </div>
 
-
         {/* Modal Pop up */}
-        {modal === true ?
-      <ModalComponent logo={logo} />  : null
-        }
-        
+        {modal === true ? <ModalComponent logo={logo} /> : null}
       </div>
     </Layouts>
   );
