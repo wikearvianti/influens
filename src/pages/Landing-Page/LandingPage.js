@@ -14,6 +14,9 @@ import Card from "../../Components/Card";
 import Layouts from "../../Layout";
 
 export default function LandingPage() {
+  const isLogin = localStorage.getItem("isLogin");
+  const cardContents = []
+
   return (
     <Layouts>
       <div className="container-fluid bg-light">
@@ -28,7 +31,7 @@ export default function LandingPage() {
                 dunia melalui influencer terkenal
               </p>
               <button className="btn me-2 rounded-pill mainColor" type="button">
-                Daftar
+                {isLogin ? `Cari influencer` : "Daftar"}
               </button>
             </div>
             <div className="col-12 col-md-6 d-none d-xs-none d-md-block">
@@ -38,7 +41,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container my-5 py-5">
         <div className="fw-bold fs-4 heroText d-flex justify-content-center mb-4">
           Didukung Oleh
         </div>
@@ -71,7 +74,7 @@ export default function LandingPage() {
               <img src={cari} className="card-img p-5" alt="Card Influencer" />
 
               <div className="card-body">
-                <div className="fw-bolder fs-5 mb-3">1. Cari Influencer</div>
+                <div className="fw-bolder mb-3">1. Cari Influencer</div>
                 <div className="text-secondary">
                   Puluhan influencer terdaftar untuk membantu UMKM dalam
                   mempromosikan jasa atau produk mereka
@@ -90,7 +93,7 @@ export default function LandingPage() {
               />
 
               <div className="card-body">
-                <div className="fw-bolder fs-5 mb-3">2. Pilih Influencer</div>
+                <div className="fw-bolder mb-3">2. Pilih Influencer</div>
                 <div className="text-secondary">
                   Pilih influencer yang cocok dengan produk atau jasa yang akan
                   dipromosi
@@ -105,7 +108,7 @@ export default function LandingPage() {
               <img src={pilih} className="card-img p-5" alt="Card Influencer" />
 
               <div className="card-body">
-                <div className="fw-bolder fs-5 mb-3">3. Ajukan UMKM</div>
+                <div className="fw-bolder mb-3">3. Ajukan UMKM</div>
                 <div className="text-secondary">
                   Daftarkan Usaha kamu ke influencer yang kamu pilih
                 </div>
@@ -123,7 +126,7 @@ export default function LandingPage() {
               />
 
               <div className="card-body">
-                <div className="fw-bolder fs-5 mb-3">4. Tunggu</div>
+                <div className="fw-bolder mb-3">4. Tunggu</div>
                 <div className="text-secondary">
                   Terakhir, tunggu sampai influencer yang dipilih menyetujui
                   untuk mempromosikan produk atau jasa
@@ -135,14 +138,14 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container my-5 py-5">
         <div className="fw-bold fs-4 heroText d-flex justify-content-center mb-4">
           Top Influencer
         </div>
-        <div className="row justify-content-center gy-md-3 gy-sm-3 gy-3">
-          <Card />
-          <Card />
-          <Card />
+        <div className="row gx-4 justify-content-center gy-md-3 gy-sm-3 gy-3">
+          {cardContents.map((e)=> {return (
+            <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil}/>
+          )})}
         </div>
       </div>
 
