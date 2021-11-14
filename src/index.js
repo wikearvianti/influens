@@ -1,20 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './Styles/index.css';
-import reportWebVitals from './reportWebVitals';
-import Routes from './Router';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap'
-import { BrowserRouter,Route } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import "./Styles/index.css";
+import reportWebVitals from "./reportWebVitals";
+import Routes from "./Router";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+import { BrowserRouter, Route } from "react-router-dom";
+import { AuthProvider } from "./Context/auth/auth";
 
 ReactDOM.render(
-  <BrowserRouter>
-       <Routes />
-  </BrowserRouter>,
-  document.getElementById('root')
-
+  <AuthProvider>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  </AuthProvider>
+  ,
+  document.getElementById("root")
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

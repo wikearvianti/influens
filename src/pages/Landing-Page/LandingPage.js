@@ -12,10 +12,14 @@ import pilih from "./Assets/pilih.svg";
 import tunggu from "./Assets/tunggu.svg";
 import Card from "../../Components/Card";
 import Layouts from "../../Layout";
+import { useAuthState } from "../../Context/auth/auth";
 
 export default function LandingPage() {
+
   const isLogin = localStorage.getItem("isLogin");
-  const cardContents = []
+  const state = useAuthState()
+  
+  
 
   return (
     <Layouts>
@@ -143,9 +147,12 @@ export default function LandingPage() {
           Top Influencer
         </div>
         <div className="row gx-4 justify-content-center gy-md-3 gy-sm-3 gy-3">
-          {cardContents.map((e)=> {return (
-            <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil}/>
-          )})}
+          { state.data !== undefined ?
+            state.data.slice(0,3).map((e)=> {return (
+              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil}/>
+            )}) : <p>Loading...</p>
+          
+         }
         </div>
       </div>
 

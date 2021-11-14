@@ -179,7 +179,6 @@ export default function FormPengajuan() {
                     Jabatan
                   </label>
                   <select
-                    className="form-select"
                     className={
                       errors?.role ? "is-invalid form-select" : "form-select"
                     }

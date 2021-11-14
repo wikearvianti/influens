@@ -1,11 +1,10 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import React, { useState } from "react";
 
 export default function ModalComponent({ logo }) {
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <div>
       <>
