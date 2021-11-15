@@ -6,6 +6,7 @@ import Daftar from "../pages/Daftar/daftar";
 import Login from "../pages/Login/login";
 
 export default function Routers() {
+    
     return(
         <Routes>
             <Route path="/" element={<LandingPage />} />
