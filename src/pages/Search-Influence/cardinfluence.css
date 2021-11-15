@@ -1,0 +1,16 @@
+.icon-heart{
+    color: violet;
+}
+.icon-heart:hover{
+    color: darkviolet;
+}
+
+.card-img-overlay {
+    bottom: unset !important;
+    right: unset !important;
+    background-color: darkviolet;
+    color: white;
+  }
+.cardInfluence{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
