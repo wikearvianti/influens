@@ -1,4 +1,4 @@
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/Landing-Page/LandingPage"
 import FormPengajuan from "../pages/Form-Pengajuan/Form-pengajuan";
 import Profile from "../pages/Profile/Profile"
