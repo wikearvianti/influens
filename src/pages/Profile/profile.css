@@ -14,7 +14,7 @@
 
 .profile-card {
     position: absolute;
-    top: 22vh;
+    top: 34vh;
 }
 .profile img{
     object-fit: cover;
@@ -23,7 +23,7 @@
 }
 
 .lebar {
-  height: 250px;
+  height: 200px;
 }
 
 .table-dark {
