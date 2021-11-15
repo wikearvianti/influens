@@ -1,10 +1,11 @@
 import React from "react";
+import Layouts from "../../Layout";
 import "./profile.css";
 
 export default function Profile({ title, namaUsaha, jenisUsaha }) {
   let historyData = JSON.parse(localStorage.getItem("history"));
   return (
-    <>
+    <Layouts>
       <img
         src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=874&q=80"
         class="img-fluid"
@@ -22,12 +23,12 @@ export default function Profile({ title, namaUsaha, jenisUsaha }) {
                 alt="..."
               />{" "}
             </div>
-            <div className="fw-bolder mb-2">{title}</div>
-            <div className="fw-bold fs-5">{namaUsaha}</div>
-            <div className="text-muted fw-bolder">{jenisUsaha}</div>
+            <div className="fw-bolder mb-2">Mantap</div>
+            <div className="fw-bold fs-5">mantap</div>
+            <div className="text-muted fw-bolder">mantap</div>
           </div>
         </div>
-        <div className="my-5">
+        <div className="my-5 lebar">
           <div className="row d-flex justify-content-center">
             <div className="col-lg-8 col-12">
               <div className="fw-bolder my-3">Riwayat Pengajuan</div>
@@ -43,7 +44,7 @@ export default function Profile({ title, namaUsaha, jenisUsaha }) {
                   {historyData.map((e, index) => {
                     return (
                       <tr key={index}>
-                        <th scope="row">{e.namaInfluencer}</th>
+                        <th scope="row">{e.nama}</th>
                         <td>{e.date}</td>
                         <td>Pengajuan Anda sedang direview</td>
                       </tr>
@@ -55,6 +56,6 @@ export default function Profile({ title, namaUsaha, jenisUsaha }) {
           </div>
         </div>
       </div>
-    </>
+    </Layouts>
   );
 }

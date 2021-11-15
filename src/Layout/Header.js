@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "./assets/influens.svg";
 import "./styles/header.css";
 
@@ -8,9 +9,9 @@ export default function Header(props) {
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm">
       <div className="container">
-        <a className="mt-0 me-4" href="#">
+        <Link to="/" className="mt-0 me-4" href="#">
           <img src={logo} width="80" height="80" alt="Logo" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,9 +26,10 @@ export default function Header(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link to="/" className="nav-link active" aria-current="page">
                 Beranda
-              </a>
+              
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link colorLink fw-bolder" href="#">

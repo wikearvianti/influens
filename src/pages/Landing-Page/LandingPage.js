@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../Landing-Page/LandingPage.css";
 import ali from "./Assets/CompanyLogo/ali.svg";
 import bsi from "./Assets/CompanyLogo/bsi.svg";
@@ -12,12 +12,19 @@ import pilih from "./Assets/pilih.svg";
 import tunggu from "./Assets/tunggu.svg";
 import Card from "../../Components/Card";
 import Layouts from "../../Layout";
-import { useAuthState } from "../../Context/auth/auth";
+import { useAuthState, useAuthDispatch } from "../../Context/auth/auth";
+import { fetchApi } from "../../Context/action/action";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
 
   const isLogin = localStorage.getItem("isLogin");
   const state = useAuthState()
+  const dispatch = useAuthDispatch()
+
+  useEffect(()=>{
+    fetchApi(dispatch);
+  }, [dispatch])
   
   
 
@@ -34,9 +41,9 @@ export default function LandingPage() {
                 Influens memudahkan wirausahawan mempromosi UMKM-nya kepada
                 dunia melalui influencer terkenal
               </p>
-              <button className="btn me-2 rounded-pill mainColor" type="button">
+              <Link to="/profile" className="btn me-2 rounded-pill mainColor" type="button">
                 {isLogin ? `Cari influencer` : "Daftar"}
-              </button>
+              </Link>
             </div>
             <div className="col-12 col-md-6 d-none d-xs-none d-md-block">
               <img src={hero} width="510" height="360" alt="Logo" />
@@ -149,7 +156,7 @@ export default function LandingPage() {
         <div className="row gx-4 justify-content-center gy-md-3 gy-sm-3 gy-3">
           { state.data !== undefined ?
             state.data.slice(0,3).map((e)=> {return (
-              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil}/>
+              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil} link={""}/>
             )}) : <p>Loading...</p>
           
          }

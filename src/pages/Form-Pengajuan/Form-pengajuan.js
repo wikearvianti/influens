@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../Assets/Group.svg";
 import Layouts from "../../Layout";
 import { useForm } from "react-hook-form";
 import ModalComponent from "../../Components/Modal";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
+import { useAuthDispatch, useAuthState } from "../../Context/auth/auth";
+import { fetchApi } from "../../Context/action/action";
 
 function SaveDataToLocalStorage(data) {
   var a = [];
@@ -33,13 +35,28 @@ function getDate() {
   const date = getdate.getDate();
   const year = getdate.getFullYear();
 
-  const result = `${date} ${month} ${year}`
+  const result = `${date} ${month} ${year}`;
   let objResult = { date: result };
-  return objResult
+  return objResult;
 }
 
 export default function FormPengajuan() {
-  let userData = JSON.parse(localStorage.getItem("userData"));
+  const dispatch = useAuthDispatch();
+  const state = useAuthState();
+
+  useEffect(() => {
+    fetchApi(dispatch);
+  }, [dispatch]);
+
+  console.log(state);
+
+  let { id } = useParams();
+  console.log(id);
+
+  let getInfluencer = (state.data !== undefined ? state.data.find((x) => x.id === Number(id)) : null);
+
+  console.log(getInfluencer)
+  
   const [modal, setModal] = useState(false);
   const navigate = useNavigate();
   const {
@@ -48,11 +65,10 @@ export default function FormPengajuan() {
     handleSubmit,
   } = useForm();
 
-
   const onSubmit = (data) => {
-    const dateFix = getDate()
-    const nameInfluencer = userData.name
-    const addDate = { ...data, ...dateFix, ...nameInfluencer};
+    const dateFix = getDate();
+    const nameInfluencer = getInfluencer.nama;
+    const addDate = { ...data, ...dateFix, nama: nameInfluencer };
     SaveDataToLocalStorage(addDate);
     setModal(true);
     setTimeout(() => {
