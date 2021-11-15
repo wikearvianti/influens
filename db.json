@@ -1,0 +1,331 @@
+{
+    "influencer" : [
+        {
+            "id" : 1,
+            "img_sampul" : "https://awsimages.detik.net.id/community/media/visual/2021/08/20/manisnya-anya-geraldine-saat-nikmati-sarapan-dan-ngemil-fried-chicken-9_169.jpeg?w=700&q=90",
+            "img_profil" :"https://img.okezone.com/content/2021/10/30/33/2494105/deretan-mantan-pacar-anya-geraldine-nomor-3-nyaris-menikah-ey7fIlQ5pa.jpg",
+            "nama" : "Anya Geraldine",
+            "followers" : "2.4M",
+            "kategori" : "Beauty Influencer",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "2.4M",
+                "likes-instagram" : "20M",
+                "comments-instagram" :"30M",
+                "followers-facebook" : "200k",
+                "likes-facebook" : "1M",
+                "comments-facebook" :"500K"
+            },
+            "tags" : ["kecantikan","artis","model"],
+            "about" : "Selain berkarier di dunia hiburan, Anya juga memiliki beberapa bisnis yang bekerja sama dengan temannya. Beberapa bisnisnya bergerak dibidang kuliner, kosmetik, hingga liquid rokok elektronik. Ia juga mengaku memiliki peternakan lele dan bebek"
+        },
+        {
+            "id" : 2,
+            "img_sampul" : "https://cdns.klimg.com/kapanlagi.com/p/headline/476x238/selamat-tasya-farasya-lahirkan-anak-per-112070.jpg",
+            "img_profil" :"https://yt3.ggpht.com/ytc/AKedOLSEtgRoq3WQahv4tTKFAnF5ali1DyZddwUZP1-FRw=s900-c-k-c0x00ffffff-no-rj",
+            "nama" : "Tasya Farasya",
+            "followers" : "5M",
+            "kategori" : "Beauty Influencer",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "5M",
+                "likes-instagram" : "40M",
+                "comments-instagram" :"50M",
+                "followers-facebook" : "300k",
+                "likes-facebook" : "2M",
+                "comments-facebook" :"800K",
+                "followers-twitter" : "50k",
+                "likes-twitter" : "10k",
+                "comments-twitter" :"20K"
+            },
+            "tags" : ["kecantikan","artis","model"],
+            "about" : "Dikenal sebagai seorang beauty vlogger, perjalanan Tasya Farasya meniti kariernya diwarnai banyak tantangan. Berawal dari kecintaannya terhadap dunia kecantikan, totalitas Tasya berbuah manis dan membawanya ke posisi sekarang. Tasya sempat merampungkan studi S1 Kedokteran Gigi di Universitas Trisakti. Ia merupakan anak dari seorang pengusaha ternama."
+        },
+        {
+            "id" : 3,
+            "img_sampul" : "https://correcto.id/content/images/th1_2021031809004849922.jpg",
+            "img_profil" :"https://cdns.klimg.com/dream.co.id/resized/300x//real/2021/03/19/671764/ilustrasi.jpg",
+            "nama" : "Hanum Mega",
+            "followers" : "1.5M",
+            "kategori" : "Beauty Influencer",
+            "lokasi" : "Jawa Barat",
+            "insight" : {
+                "followers-instagram" : "1.5M",
+                "likes-instagram" : "20M",
+                "comments-instagram" :"30M",
+                "followers-facebook" : "100k",
+                "likes-facebook" : "500k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "40k",
+                "likes-twitter" : "50k",
+                "comments-twitter" :"20K"
+            },
+            "tags" : ["kecantikan","artis","model"],
+            "about" : "Hanum Mega menjadi terkenal di media sosial sebagai seorang selebgram dan beauty influencer yang sering mengunggah konten-kontennya saat menggunakan dan memberikan tips-tips serta tutorial tentang makeup.Selebgram ini adalah salah satu sosok slebgram yang memiliki sifat penyayang terhadap binatang gaes. Hal ini terbujti dalam beberapa unggahannya bersama dengan seekor kucing cantik yang diketahui adalah miliknya sendiri."
+        },
+        {
+            "id" : 4,
+            "img_sampul" : "https://dailyspin.id/wp-content/uploads/2020/07/Jess-no-limit-1.jpg",
+            "img_profil" :"https://cdn.idntimes.com/content-images/post/20180523/8-e35be11da8ab857e61506498a45ccc6b.jpg",
+            "nama" : "Jess No Limit",
+            "followers" : "10M",
+            "kategori" : "Gamers",
+            "lokasi" : "Jawa Barat",
+            "insight" : {
+                "followers-instagram" : "10M",
+                "likes-instagram" : "40M",
+                "comments-instagram" :"70M",
+                "followers-facebook" : "100k",
+                "likes-facebook" : "500k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "100k",
+                "likes-twitter" : "20k",
+                "comments-twitter" :"10K"
+            },
+            "tags" : ["Gamers","Penyanyi","Food vloger"],
+            "about" : "Pada bulan April pada tahun 2020, ia resmi menjadi YouTuber dengan konten permainan daring dan olahraga elektronik di Indonesia yang untuk pertama kalinya berhasil menembus angka sepuluh juta pelanggan, dan terus bertambah menjadi lima belas juta pelanggan hanya dalam kurun waktu dua bulan saja."
+        },
+        {
+            "id" : 5,
+            "img_sampul" : "https://i0.wp.com/esportsnesia.com/wp-content/uploads/2020/07/Nama-Asli-MiawAug.jpg",
+            "img_profil" :"https://cdn.idntimes.com/content-images/community/2020/05/73243940-165514044638848-8229420214360637274-n-e1e31893d5664a22e5e632ff793fd412.jpg",
+            "nama" : "MiawAug",
+            "followers" : "3M",
+            "kategori" : "Gamers",
+            "lokasi" : "Jawa Barat",
+            "insight" : {
+                "followers-instagram" : "3M",
+                "likes-instagram" : "10M",
+                "comments-instagram" :"20M",
+                "followers-facebook" : "50k",
+                "likes-facebook" : "50k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "30k",
+                "likes-twitter" : "60k",
+                "comments-twitter" :"70K"
+            },
+            "tags" : ["Gamers","Technology"],
+            "about" : "MiawAug merupakan seorang Youtuber yang memiliki nama asli Reggie Prabowo Wongkar. Ia saat ini dikenal sebagai Youtuber Gaming dengan subscriber terbanyak di Indonesia.Sebelum mencapai kesuksesan seperti sekarang, Reggie telah melakukan banyak hal, termasuk konsisten dalam membuat konten. Bersumber dari sebuah thread Kaskus, awal mula Reggie membangun kariernya berkat hobi dalam bermain game, bahkan sejak ia masih kecil."
+        },
+        {
+            "id" : 6,
+            "img_sampul" : "https://kuyou.id/content/images/biodata-jessica-jane-lengkap-umur-dan-agama-adik-jess-no-limit-20201120062404.jpg",
+            "img_profil" :"https://cdn.popbela.com/content-images/post/20210422/1-07a87b93c651d8412660da4c43236bf9.jpg",
+            "nama" : "Jessica Jane",
+            "followers" : "20M",
+            "kategori" : "Gamers",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "20M",
+                "likes-instagram" : "50M",
+                "comments-instagram" :"80M",
+                "followers-facebook" : "310k",
+                "likes-facebook" : "200k",
+                "comments-facebook" :"20k",
+                "followers-twitter" : "520k",
+                "likes-twitter" : "150k",
+                "comments-twitter" :"70K"
+            },
+            "tags" : ["lifestyle","Gaming","Beauty","Food & Drink"],
+            "about" : "Sudah bukan rahasia lagi jika dara belia yang cantik ini mahir memainkan game eSport. Di antaranya seperti PUBG, Mobile Legend, hingga AOV. Channel YouTube miliknya pun berisi berbagai konten game, masak memasak, make-up tutorial, dan mukbang broadcasting yang sering ia unggah."
+        },
+        {
+            "id" : 7,
+            "img_sampul" : "https://awsimages.detik.net.id/community/media/visual/2021/05/23/tanboy-kun-mukbang-mie-seblak-3.jpeg?w=700&q=90",
+            "img_profil" :"https://cdn.idntimes.com/content-images/community/2021/03/tanboy-kun-ckvj9jthasv-c6b2336a7a5222283e38595d4c310d01-2c084bc75328f44bcdbda3e7c9bf7d3f.jpg",
+            "nama" : "Tanboy Kun",
+            "followers" : "200k",
+            "kategori" : "Food Vlogger",
+            "lokasi" : "Padang, Sumatera",
+            "insight" : {
+                "followers-instagram" : "200k",
+                "likes-instagram" : "1M",
+                "comments-instagram" :"500K",
+                "followers-facebook" : "50k",
+                "likes-facebook" : "100k",
+                "comments-facebook" :"20K",
+                "followers-twitter" : "50k",
+                "likes-twitter" : "10k",
+                "comments-twitter" :"1K"
+            },
+            "tags" : ["Food","Mukbang"],
+            "about" : "Bara Ilham Bakti Perkasa, S.E. atau lebih dikenal dengan nama Tanboy Kun (lahir 18 November 1993) adalah adalah seorang kreator konten dan naravlog kuliner asal Indonesia. Ciri khasnya yaitu konten mukbang dengan porsi super banyak dan bercita rasa pedas."
+        },
+        {
+            "id" : 8,
+            "img_sampul" : "https://akcdn.detik.net.id/api/wm/2020/12/01/5-food-vlogger-ini-punya-usaha-kuliner-sendiri_169.jpeg",
+            "img_profil" :"https://yt3.ggpht.com/ytc/AKedOLTgyZzIPqqkPf8L-KtEbbqHwUZdUyyMpqWzFv2tlA=s900-c-k-c0x00ffffff-no-rj",
+            "nama" : "Mgdalenaf",
+            "followers" : "3M",
+            "kategori" : "Food Vlogger",
+            "lokasi" : "Jawa Barat",
+            "insight" : {
+                "followers-instagram" : "3M",
+                "likes-instagram" : "10M",
+                "comments-instagram" :"20M",
+                "followers-facebook" : "50k",
+                "likes-facebook" : "50k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "30k",
+                "likes-twitter" : "60k",
+                "comments-twitter" :"70K"
+            },
+            "tags" : ["Food","Mukbang","Lifestyle","kecantikan"],
+            "about" :"Mgdalenaf (lahir 29 April 1994) adalah seorang konten kreator dan naravlog kuliner berasal dari Indonesia. Ciri khasnya yaitu mereview makanan yang bar-bar, porsi besar dan makanan pedas. Ia terkenal dengan jargonnya yaitu Bar-Bar Kuy"
+        },
+        {
+            "id" : 9,
+            "img_sampul" : "https://cdn.popmama.com/content-images/post/20190901/ken-grat-resmi-menikah-2-a255e579d011170aa3889a6743109ab8_600xauto.jpg",
+            "img_profil" :"https://cdn.popbela.com/content-images/post/20180123/21577134-1875615402766801-6386859369811673088-n-bd301bb7875b0a5b4f59beba379bffe2.jpg",
+            "nama" : "ken and grat",
+            "followers" : "500K",
+            "kategori" : "Food Vlogger",
+            "lokasi" : "Jawa Barat",
+            "insight" : {
+                "followers-instagram" : "500K",
+                "likes-instagram" : "1M",
+                "comments-instagram" :"400K",
+                "followers-facebook" : "180k",
+                "likes-facebook" : "90k",
+                "comments-facebook" :"40K",
+                "followers-twitter" : "20k",
+                "likes-twitter" : "10k",
+                "comments-twitter" :"20K"
+            },
+            "tags" : ["Lifestyle","Mukbang","Food & Drink"],
+            "about" : "Ken & Grat adalah pasangan yang lahir di Jakarta pada tahun 1992 silam.Dikenal sebagai YouTuber yang suka makan, ternyata kini keduanya juga sukses dengan membuka usaha di bidang kuliner lho."
+        },
+        {
+            "id" : 10,
+            "img_sampul" : "https://blog.okutamarketing.com/wp-content/uploads/2020/04/maxresdefault-538-1140x641.jpg",
+            "img_profil" :"https://yt3.ggpht.com/ytc/AKedOLSfuUp6wZqbYpisKVN2SD45ohudWodwVjlBjpeyqQ=s900-c-k-c0x00ffffff-no-rj",
+            "nama" : "Syifa Kenedi",
+            "followers" : "500k",
+            "kategori" : "Pendidikan",
+            "lokasi" : "Padang, Sumatera",
+            "insight" : {
+                "followers-instagram" : "500k",
+                "likes-instagram" : "1M",
+                "comments-instagram" :"200k",
+                "followers-facebook" : "150k",
+                "likes-facebook" : "50k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "60k",
+                "likes-twitter" : "30k",
+                "comments-twitter" :"90K"
+            },
+            "tags" : ["Lifestyle","Health","Education","Vacation"],
+            "about" : "Se­hari-hari dokter muda ini sedang co­ass di Rumah Sakit Umum Cut Mutia (RSUCM) Aceh Utara. Di balik pro­fesinya sebagai calon dokter, ga­dis yang tinggal di Uteunkot Cunda, Lhokseumawe ini banyak memiliki prestasi baik tingkat lokal, nasio­nal maupun internasional. Prestasi itu di bidang menulis, musik, aka­demik, hingga penelitian."
+        },
+        {
+            "id" : 11,
+            "img_sampul" : "https://cdn1-production-images-kly.akamaized.net/XiPyBSo5Af_Qdf8jr3gFr3Z_TtM=/0x0:1360x765/673x379/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3162938/original/036890800_1593145750-Landscape_Tasya_Kamila_4.jpg",
+            "img_profil" :"https://assets.pikiran-rakyat.com/crop/39x288:1031x1109/x/photo/2020/09/22/690218618.png",
+            "nama" : "Tasya Kamila",
+            "followers" : "15M",
+            "kategori" : "Pendidikan",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "15M",
+                "likes-instagram" : "30M",
+                "comments-instagram" :"10M",
+                "followers-facebook" : "5M",
+                "likes-facebook" : "1M",
+                "comments-facebook" :"500k",
+                "followers-twitter" : "300k",
+                "likes-twitter" : "200k",
+                "comments-twitter" :"90K"
+            },
+            "tags" : ["Family","Education","Lifestyle","Beauty"],
+            "about" : "Ia masuk ke dunia hiburan Indonesia sejak masih duduk di bangku taman kanak-kanak. Saat itu, secara tidak sengaja seorang ibu menawari Tasya untuk menjadi bintang iklan dan mengantar ke salah satu biro iklan.Tasya menempuh pendidikan di Fakultas Ekonomi Universitas Indonesia pada tahun 2009, dan melanjutkan studinya di Columbia University pada tahun 2014 dan lulus pada 2017."
+        },
+        {
+            "id" : 12,
+            "img_sampul" : "https://cdn1-production-images-kly.akamaized.net/UKRNKHPUJMIFlOaDPB5buNXHZug=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2843561/original/003281100_1562143182-jerome.jpg",
+            "img_profil" :"https://awsimages.detik.net.id/community/media/visual/2020/08/14/jerome-polin-15_43.jpeg?w=700&q=90",
+            "nama" : "Jerome Polin",
+            "followers" : "5M",
+            "kategori" : "Pendidikan",
+            "lokasi" : "Surabaya",
+            "insight" : {
+                "followers-instagram" : "5M",
+                "likes-instagram" : "10M",
+                "comments-instagram" :"7M",
+                "followers-facebook" : "500K",
+                "likes-facebook" : "250k",
+                "comments-facebook" :"150K",
+                "followers-twitter" : "6M",
+                "likes-twitter" : "600k",
+                "comments-twitter" :"1M"
+            },
+            "tags" : ["Education","Technology","Hiburan"],
+            "about" : "erome memulai kanal YouTube bernama Nihongo Mantappu pada tahun 2017. Pada awalnya, ia membagikan konten video yang membahas pelajaran bahasa Jepang.[12] Kanal ini mendapatkan Silver Play Button pada tahun 2018 dan Gold Play Button pada tahun 2019. Selain mengembangkan kanal YouTube, pada bulan April 2021, Jerome bersama kakaknya, Jehian membuka jejaring bisnis teh buah yang diberi nama Menantea."
+        },
+        {
+            "id" : 13,
+            "img_sampul" : "https://cdn0-production-images-kly.akamaized.net/ubKyX96KWQMGqc2jwpmejAe-pIg=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2948551/original/033432300_1571902765-MI2.jpg",
+            "img_profil" :"https://yt3.ggpht.com/ytc/AKedOLR5GGmiMZ8g1dPM41zoJQJqfdu8Je81Mbdsu5YKkA=s900-c-k-c0x00ffffff-no-rj",
+            "nama" : "Miselia Ikwan",
+            "followers" : "7M",
+            "kategori" : "Hiburan",
+            "lokasi" : "Surabaya",
+            "insight" : {
+                "followers-instagram" : "7M",
+                "likes-instagram" : "20M",
+                "comments-instagram" :"5M",
+                "followers-facebook" : "500k",
+                "likes-facebook" : "150k",
+                "comments-facebook" :"100K",
+                "followers-twitter" : "300k",
+                "likes-twitter" : "260k",
+                "comments-twitter" :"170K"
+            },
+            "tags" : ["Music","Lifestyle","Hiburan"],
+            "about" : "Misell tertarik dengan dunia musik sejak usia 12 tahun. Kala itu ia membuat video cover dengan durasi 15 detik di akun Instagram miliknya yang kini sudah meraih lebih dari 2 juta pengikut.Ia juga mengunggah video cover dengan durasi lengkap di kanal YouTube"
+        },
+        {
+            "id" : 14,
+            "img_sampul" : "https://cdn-2.tstatic.net/jambi/foto/bank/images/raffi-ahmad-ingin-tambah-momongan.jpg",
+            "img_profil" :"https://storage.googleapis.com/ares-profile-pictures/hd/raffinagita1717-8e0c0f6e3e4ac73dfe413681f164123f_hd.jpg",
+            "nama" : "Raffi Nagita",
+            "followers" : "40M",
+            "kategori" : "Hiburan",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "40M",
+                "likes-instagram" : "100M",
+                "comments-instagram" :"90M",
+                "followers-facebook" : "5M",
+                "likes-facebook" : "4M",
+                "comments-facebook" :"10M",
+                "followers-twitter" : "300k",
+                "likes-twitter" : "450k",
+                "comments-twitter" :"300K"
+            },
+            "tags" : ["Family","Artis","Hiburan","Music"],
+            "about" : "Pada tanggal 17 Oktober 2014, Raffi resmi mempersunting aktris Nagita Slavina. Saat itu pernikahan keduanya mampu menyedot perhatian publik karena disiarkan secara langsung di salah satu televisi nasional Indonesia.Pada tanggal 15 Agustus 2015, Raffi dan Nagita dikaruniai seorang bayi laki-laki yang diberi nama Rafathar Malik Ahmad."
+        },
+        {
+            "id" : 15,
+            "img_sampul" : "https://cdn.timesmedia.co.id/images/2021/06/04/ria-ricis.jpg",
+            "img_profil" :"https://assets.promediateknologi.com/crop/0x53:1076x708/x/photo/2021/09/13/4022191084.jpg",
+            "nama" : "Ria Ricis",
+            "followers" : "30M",
+            "kategori" : "Hiburan",
+            "lokasi" : "DKI Jakarta",
+            "insight" : {
+                "followers-instagram" : "30M",
+                "likes-instagram" : "40M",
+                "comments-instagram" :"25M",
+                "followers-facebook" : "500k",
+                "likes-facebook" : "250k",
+                "comments-facebook" :"180K",
+                "followers-twitter" : "130k",
+                "likes-twitter" : "460k",
+                "comments-twitter" :"300K"
+            },
+            "tags" : ["Hiburan"],
+            "about" : "Ria Ricis mengawali kariernya melalui akun sosial medianya, yaitu Instagram. Dengan mengunggah konten foto dan video lucu, hal itu membuat dirinya mendapat respons baik dari warganet."
+        }
+    ]
+}
