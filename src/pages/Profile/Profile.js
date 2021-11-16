@@ -2,8 +2,11 @@ import React from "react";
 import Layouts from "../../Layout";
 import "./profile.css";
 
-export default function Profile({ title, namaUsaha, jenisUsaha }) {
+export default function Profile() {
   let historyData = JSON.parse(localStorage.getItem("history"));
+  let userData = JSON.parse(localStorage.getItem("data-daftar"));
+  console.log(historyData);
+
   return (
     <Layouts>
       <img
@@ -23,35 +26,41 @@ export default function Profile({ title, namaUsaha, jenisUsaha }) {
                 alt="..."
               />{" "}
             </div>
-            <div className="fw-bolder mb-2">Mantap</div>
-            <div className="fw-bold fs-5">mantap</div>
-            <div className="text-muted fw-bolder">mantap</div>
+            <div className="fw-bolder mb-2">{userData.username}</div>
+            <div className="fw-bold fs-5">{userData.usaha}</div>
+            <div className="text-muted fw-bolder">{userData.bidang}</div>
           </div>
         </div>
         <div className="my-5 lebar">
           <div className="row d-flex justify-content-center">
             <div className="col-lg-8 col-12">
               <div className="fw-bolder my-3">Riwayat Pengajuan</div>
-              <table class="table shadow rounded table-hover">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Nama Influencer</th>
-                    <th scope="col">Tanggal Pengajuan</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {historyData.map((e, index) => {
-                    return (
-                      <tr key={index}>
-                        <th scope="row">{e.nama}</th>
-                        <td>{e.date}</td>
-                        <td>Pengajuan Anda sedang direview</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+
+              {historyData === null ? (
+                <h4 className="fw-bolder">Kamu Belum Mengajukan</h4>
+              ) : (
+                <table class="table shadow rounded table-hover">
+                  <thead className="table-dark">
+                    <tr>
+                      <th scope="col">Nama Influencer</th>
+                      <th scope="col">Tanggal Pengajuan</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {historyData.map((e, index) => {
+                      return (
+                        <tr key={index}>
+                          <th scope="row">{e.nama}</th>
+                          <td>{e.date}</td>
+                          <td>Pengajuan Anda sedang direview</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              )}
             </div>
           </div>
         </div>

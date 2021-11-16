@@ -41,7 +41,7 @@ export default function LandingPage() {
                 Influens memudahkan wirausahawan mempromosi UMKM-nya kepada
                 dunia melalui influencer terkenal
               </p>
-              <Link to="/profile" className="btn me-2 rounded-pill mainColor" type="button">
+              <Link to={isLogin ? "/search-influence" : "/daftar"} className="btn me-2 rounded-pill mainColor" type="button">
                 {isLogin ? `Cari influencer` : "Daftar"}
               </Link>
             </div>
@@ -156,7 +156,7 @@ export default function LandingPage() {
         <div className="row gx-4 justify-content-center gy-md-3 gy-sm-3 gy-3">
           { state.data !== undefined ?
             state.data.slice(0,3).map((e)=> {return (
-              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil} link={""}/>
+              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil} link={`/search-influence/${e.id}`}/>
             )}) : <p>Loading...</p>
           
          }

@@ -16,7 +16,7 @@ export default function Routers() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/daftar" element={<Daftar />} />
             <Route path="/login" element={<Login/>} />
-             <Route path='/search-influence/:idBaru' element={< InfluenceProfile/>} />
+            <Route path='/search-influence/:idBaru' element={< InfluenceProfile/>} />
             <Route path="/search-influence" element={< SearchInfluencer/>} />
         </Routes>
     )
