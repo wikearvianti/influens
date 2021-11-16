@@ -1,11 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "./assets/influens.svg";
 import "./styles/header.css";
 
 export default function Header(props) {
   const isLogin = localStorage.getItem("isLogin");
+  let userData = JSON.parse(localStorage.getItem("data-daftar"));
   console.log(isLogin);
+  const navigate = useNavigate()
+
+  const onSubmit = () => {
+    localStorage.setItem("isLogin", false);
+    navigate("/")
+  }
+
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm">
       <div className="container">
@@ -32,13 +40,13 @@ export default function Header(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link colorLink fw-bolder" href="#">
+              <Link to="/search-influence" className="nav-link colorLink fw-bolder" href="#">
                 Cari Influencer
-              </a>
+              </Link>
             </li>
           </ul>
 
-          {isLogin ? (
+          {isLogin === "true" ? (
             <div className="dropdown navbar-nav">
               <a
                 href="#"
@@ -60,28 +68,28 @@ export default function Header(props) {
               >
                 <li>
                   <div className="dropdown-item pe-none p-4">
-                    <div className="fw-bolder text-center">John Mayer</div>
+                    <div className="fw-bolder text-center">{userData.username}</div>
                     <div className="text-secondary text-center">
-                      john@mail.com
+                      {userData.email}
                     </div>
                   </div>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link to="/profile" className="dropdown-item" href="#">
                     <div className="fw-bolder text-secondary">
                       Profil dan Status
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    <div className="fw-bolder text-secondary">Favorit Saya</div>
+                  <a className="dropdown-item pe-none" href="#">
+                    <div className="fw-bolder text-muted">Favorit Saya <span className="fw-lighter text-warning" >(on dev)</span></div>
                   </a>
                 </li>
 
                 <hr />
                 <li>
-                  <a className="dropdown-item text-danger" href="#">
+                  <a className="dropdown-item text-danger" href="#" onClick={()=>onSubmit()}>
                     keluar
                   </a>
                 </li>
@@ -89,12 +97,12 @@ export default function Header(props) {
             </div>
           ) : (
             <>
-              <button className="btn me-2 rounded-pill secondary" type="submit">
+              <Link to="/daftar" className="btn me-2 rounded-pill secondary" type="submit">
                 Daftar
-              </button>
-              <button className="btn rounded-pill mainColor" type="submit">
+              </Link>
+              <Link to="/login" className="btn rounded-pill mainColor" type="submit">
                 Masuk
-              </button>
+              </Link>
             </>
           )}
           

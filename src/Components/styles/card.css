@@ -31,3 +31,17 @@
   background-color: darkviolet;
   color: white;
 }
+
+
+/* a {
+	text-decoration: none!important;
+	color: transparent;
+}
+
+a:hover {
+	color: transparent!important;
+} */
+
+.black {
+  color: black;
+}
