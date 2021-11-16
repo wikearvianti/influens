@@ -5,7 +5,7 @@ import "./cardinfluence.css"
 export default function CardInfluence({img,name,location,category,followers,idBaru,href}){
     return (
         <div className="cardInfluence p-0 bg-light" style={{boxShadow: "0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06)"}}>
-            <div className="image p-0" style={{ height: "250px" }}>
+            <div className="image p-0">
                 <img
                     src={img}
                     className="img-fluid"
@@ -14,13 +14,13 @@ export default function CardInfluence({img,name,location,category,followers,idBa
                 <div className="card-img-overlay float-end p-2 fw-bold fs-6">top</div>
             </div>
             <div className="product-detail-container p-2">
-                <div className="d-flex">
+                <div className="d-flex justify-content-between">
                     <div className="ms-lg-1 ms-md-1 ms-sm-1"><strong style={{color:"rgb(51,0,123)"}}>{name}</strong></div>
                     <button className="" style={{background:"linear-gradient(to right,#AF1B87, darkviolet)",color:"white",borderRadius:"20px", border:"2px solid white",width:"50px"}}>
                         top
                     </button>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex justify-content-between">
                     <div className="ms-lg-1">{category}</div>
                     <div className="me-lg-1"><i class="fas fa-map-marker-alt" style={{color:"rgb(51,0,123)"}}></i> {location}</div>
                 </div>

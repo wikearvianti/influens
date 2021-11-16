@@ -54,39 +54,128 @@ export default function InfluenceProfile(){
                     />
                     <br/>
                 </div>
-                <div>
+                
+            {/* </div>     */}
+            <div className="container">
+                <br/><br/>
+                <div className="mt-5">
                     <div className="Caption mb-lg-5">
                         <div className="b1-caption d-flex justify-content-between">
                             <h4>
-                                <strong>{detailInfluencer !== undefined? (detailInfluencer.nama) :null}</strong>
+                                <strong style={{color:"rgb(51,0,123)"}}>{detailInfluencer !== undefined? (detailInfluencer.nama) :null}</strong>
                             </h4>
-                            <h5 className="location"><i class="fas fa-map-marker-alt "></i>{detailInfluencer !== undefined? (detailInfluencer.lokasi) :null}</h5>
+                            <h5 className="location"><i class="fas fa-map-marker-alt "></i> {detailInfluencer !== undefined? (detailInfluencer.lokasi) :null}</h5>
                         </div>
-                        <h5 className="kategori">{detailInfluencer !== undefined? (detailInfluencer.kategori) :null}</h5>
+                        <div className="d-flex justify-content-between">
+                            <h5 className="kategori">{detailInfluencer !== undefined? (detailInfluencer.kategori) :null}</h5>
+                            <div className="d-flex">
+                                <i class="fas fa-star" style={{color:"rgb(51,0,123)"}}></i>
+                                <i class="fas fa-star" style={{color:"rgb(51,0,123)"}}></i>
+                                <i class="fas fa-star" style={{color:"rgb(51,0,123)"}}></i>
+                                <i class="fas fa-star" style={{color:"rgb(51,0,123)"}}></i>
+                            </div>
+                        </div>
                     </div>
                 </div>  
-            {/* </div>     */}
-            <div className="container">
-                <div className="row mt-5 mb-lg-5"> 
-                        <CardInsight 
-                            followers={detailInfluencer !== undefined? (detailInfluencer.insight.followersinstagram) :null} 
-                            likes={detailInfluencer !== undefined? (detailInfluencer.insight.likesinstagram) :null}
-                            comments={detailInfluencer !== undefined? (detailInfluencer.insight.commentsinstagram) :null}
-                            logo="fab fa-instagram fa-lg"
-                        />
-                        <CardInsight 
-                            followers={detailInfluencer !== undefined? (detailInfluencer.insight.followersfacebook) :null} 
-                            likes={detailInfluencer !== undefined? (detailInfluencer.insight.likesfacebook) :null}
-                            comments={detailInfluencer !== undefined? (detailInfluencer.insight.commentsfacebook) :null}
-                            logo="fab fa-facebook fa-lg"
-                        />
-                        <CardInsight 
-                            dataInsight={detailInfluencer !== undefined? (detailInfluencer.insight) :null} 
-                            followers={detailInfluencer !== undefined? (detailInfluencer.insight.followerstwitter) :null} 
-                            likes={detailInfluencer !== undefined? (detailInfluencer.insight.likestwitter) :null}
-                            comments={detailInfluencer !== undefined? (detailInfluencer.insight.commentstwitter) :null}
-                            logo="fab fa-twitter fa-lg"
-                        />          
+                <hr style={{color:"rgb(51,0,123)"}}/>
+                    <h3 className="fw-bold">Data Insight</h3>
+                <div className="row-3 d-flex justify-content-center my-4">
+                    <div className="card p-4 col-4 me-3" >
+                        <div className="d-flex justify-content-between py-3">
+                            <div className="ms-4">
+                                <i class="fab fa-instagram fa-lg" style={{ color: "#B41A82" }}></i>
+                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            </div>
+                            <div className="me-4">
+                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
+                                <strong>+11%</strong>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
+                                        <h6 className="text-center">Followers </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
+                                        <h6 className="text-center">Reactions </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
+                                        <h6 className="text-center">Comments</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div className="card p-4 col-4 me-3" >
+                        <div className="d-flex justify-content-between py-3">
+                            <div className="ms-4">
+                                <i class="fab fa-facebook fa-lg" style={{ color: "#486AA5" }}></i>
+                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            </div>
+                            <div className="me-4">
+                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
+                                <strong>+11%</strong>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
+                                        <h6 className="text-center">Followers </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
+                                        <h6 className="text-center">Reactions </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
+                                        <h6 className="text-center">Comments</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div className="card p-4 col-4" >
+                        <div className="d-flex justify-content-between py-3">
+                            <div className="ms-4">
+                                <i class="fab fa-twitter fa-lg" style={{ color: "#29AAF3"}}></i>
+                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            </div>
+                            <div className="me-4">
+                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
+                                <strong>+11%</strong>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
+                                        <h6 className="text-center">Followers </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
+                                        <h6 className="text-center">Reactions </h6>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                    <div className="py-3">
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
+                                        <h6 className="text-center">Comments</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             
 
@@ -109,7 +198,7 @@ export default function InfluenceProfile(){
                 <div className="about mt-4 mb-4">
                     <h3><strong>About</strong></h3>
                     <Row className=" mt-4 mb-4 g-4 justify-content-between">
-                        <Col md={6}>
+                        <Col md={7}>
                             <Card>
                                 <Card.Body>
                                     <blockquote className="blockquote mb-0">
@@ -120,17 +209,18 @@ export default function InfluenceProfile(){
                                         <footer className="blockquote-footer">
                                             Secara sederhana, influencer adalah seseorang yang bisa memberikan pengaruh di masyarakat.
                                             Anda bisa membuat produk Anda menjadi pusat perhatian dengan cepat. Caranya, menggandeng seseorang yang sedang viral sebagai influencer Anda.
+                                            Semoga informasi di atas dapat membantu mengembangkan bisnis Anda lebih baik lagi. Sukses untuk Anda!
                                         </footer>
                                     </blockquote>
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col md = {4}>
+                        <Col md = {5}>
                             <Card>
                                 <Card.Body>
-                                    <Card.Title>Hallo, Dewi{}!</Card.Title>
+                                    <Card.Title>Hallo,</Card.Title>
                                     <Card.Text>
-                                        Apakah kamu sudah siap membuat produkmu menjadi terkenal bersama {""}
+                                        Apakah kamu sudah siap membuat produkmu menjadi terkenal bersama {detailInfluencer !== undefined? (detailInfluencer.nama) :null}
                                     </Card.Text>
                                     <button style={{background:"darkviolet",color:"white",borderRadius:"10px", border:"2px solid white", padding:"8px 30px"}}>Daftar Sekarang</button>
                                 </Card.Body>
