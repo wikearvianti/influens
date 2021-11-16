@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "../Daftar/daftar.css";
 import Layouts from "../../Layout";
 
@@ -139,13 +140,12 @@ const Daftar = () =>{
                     </div>
                     </div>
                 </div>
-            
+ 
             <div class="mb-6 text-center">
-                <button className='form-input btn btn-primary' type="submit">
+                <button className='form-input btn btn-primary' type="submit" link to='/'>
                     Daftar
                 </button>
                 </div>
-
                 </form>
                 </div>
      </div>
