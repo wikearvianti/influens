@@ -62,9 +62,9 @@ const Login = () =>{
                     </div>
                 </div>
 
-
-                <div className="mb-6 text-center">
-                <button className='form-input btn btn-primary' type="submit">
+                
+                <div className="mb-6 text-center"> 
+                <button className='form-input btn btn-primary' type="submit" Link to='/'>
                     Login
                 </button>
                 </div>
