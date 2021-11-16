@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 1024px) {
     .FotoProfile img {
-      left: 30px;
+      left: 30px; 
     }
   }
 
@@ -55,14 +55,14 @@
       .iconLogo{
           margin-left: 70px;
       }
-      .b1-caption{
+      /* .b1-caption{
           margin-left: 350px;
           /* margin-right: 300px; */
-      }
+      /* }  */
       .location{
         margin-left: 520px;
       }
-      .kategori{
+      /* .kategori{
           margin-left: 480px;
-      }
+      } */
   }
