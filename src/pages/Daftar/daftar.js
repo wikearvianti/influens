@@ -142,7 +142,7 @@ const Daftar = () =>{
                 </div>
  
             <div class="mb-6 text-center">
-                <button className='form-input btn btn-primary' type="submit" link to='/'>
+                <button className='form-input btn btn-primary' type="submit">
                     Daftar
                 </button>
                 </div>
