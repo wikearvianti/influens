@@ -41,8 +41,8 @@ export default function LandingPage() {
                 Influens memudahkan wirausahawan mempromosi UMKM-nya kepada
                 dunia melalui influencer terkenal
               </p>
-              <Link to={isLogin ? "/search-influence" : "/daftar"} className="btn me-2 rounded-pill mainColor" type="button">
-                {isLogin ? `Cari influencer` : "Daftar"}
+              <Link to={isLogin === "true" ? "/search-influence" : "/daftar"} className="btn me-2 rounded-pill mainColor" type="button">
+                {isLogin === "true" ? `Cari influencer` : "Daftar"}
               </Link>
             </div>
             <div className="col-12 col-md-6 d-none d-xs-none d-md-block">
