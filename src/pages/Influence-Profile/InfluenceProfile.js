@@ -223,7 +223,7 @@ export default function InfluenceProfile(){
                                     <Card.Text>
                                         Apakah kamu sudah siap membuat produkmu menjadi terkenal bersama {detailInfluencer !== undefined? (detailInfluencer.nama) :null}
                                     </Card.Text>
-                                    <Link className='btn w-50 mt-2 mb-1' style={{ backgroundColor: "darkviolet", color: "white" }} to={`/form-pengajuan/:${idBaru}`}>
+                                    <Link className='btn w-50 mt-2 mb-1' style={{ backgroundColor: "darkviolet", color: "white" }} to={`/form-pengajuan`}>
                                         Daftar Sekarang
                                     </Link>
                                     
