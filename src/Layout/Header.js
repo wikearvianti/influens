@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "./assets/influens.svg";
@@ -49,17 +50,17 @@ export default function Header(props) {
           {isLogin === "true" ? (
             <div className="dropdown navbar-nav">
               <a
-                href="#"
                 role="button"
                 id="dropdownMenuLink"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80"
+                  src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
                   width="40"
                   height="40"
-                  className="rounded-circle"
+                  className="rounded-circle objfit"
+                  alt="profile"
                 />
               </a>
               <ul

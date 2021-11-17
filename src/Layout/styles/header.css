@@ -26,3 +26,7 @@
 .colorLink:hover {
     color: darkslateblue!important;
 }
+
+.objfit {
+    object-fit: cover;
+}
