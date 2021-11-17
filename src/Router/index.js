@@ -12,7 +12,7 @@ export default function Routers() {
     return(
         <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/form-pengajuan/:idBaru" element={<FormPengajuan />} />
+            <Route path="/form-pengajuan/:id" element={<FormPengajuan />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/daftar" element={<Daftar />} />
             <Route path="/login" element={<Login/>} />
