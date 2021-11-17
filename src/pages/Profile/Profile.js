@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layouts from "../../Layout";
 import "./profile.css";
 
 export default function Profile() {
   let historyData = JSON.parse(localStorage.getItem("history"));
   let userData = JSON.parse(localStorage.getItem("data-daftar"));
-  console.log(historyData);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Layouts>
@@ -15,12 +18,12 @@ export default function Profile() {
         alt="..."
       />
       <div className="container-fluid">
-        <div className="d-flex justify-content-center lebar">
+        <div className="d-flex justify-content-center position-relative lebar">
           <div className="d-flex profile-card flex-column align-items-center">
             <div class="profile mb-3">
               {" "}
               <img
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+                src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
                 class="rounded-circle"
                 width="50px"
                 alt="..."
