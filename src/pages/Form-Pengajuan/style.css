@@ -1,0 +1,9 @@
+.mainColor  {
+    color: #fff!important;
+    background-color: darkviolet!important;
+    border-color: none!important;
+}
+
+.mainColor:hover {
+    background-color: darkslateblue!important;
+}
