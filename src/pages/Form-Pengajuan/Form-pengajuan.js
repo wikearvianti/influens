@@ -48,6 +48,10 @@ export default function FormPengajuan() {
     fetchApi(dispatch);
   }, [dispatch]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   console.log(state);
 
   let { id } = useParams();
