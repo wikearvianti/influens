@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../Landing-Page/LandingPage.css";
 import ali from "./Assets/CompanyLogo/ali.svg";
 import bsi from "./Assets/CompanyLogo/bsi.svg";
@@ -17,16 +17,17 @@ import { fetchApi } from "../../Context/action/action";
 import { Link } from "react-router-dom";
 
 export default function LandingPage() {
-
   const isLogin = localStorage.getItem("isLogin");
-  const state = useAuthState()
-  const dispatch = useAuthDispatch()
+  const state = useAuthState();
+  const dispatch = useAuthDispatch();
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchApi(dispatch);
-  }, [dispatch])
-  
-  
+  }, [dispatch]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Layouts>
@@ -41,12 +42,16 @@ export default function LandingPage() {
                 Influens memudahkan wirausahawan mempromosi UMKM-nya kepada
                 dunia melalui influencer terkenal
               </p>
-              <Link to={isLogin === "true" ? "/search-influence" : "/daftar"} className="btn me-2 rounded-pill mainColor" type="button">
+              <Link
+                to={isLogin === "true" ? "/search-influence" : "/daftar"}
+                className="btn me-2 rounded-pill mainColor"
+                type="button"
+              >
                 {isLogin === "true" ? `Cari influencer` : "Daftar"}
               </Link>
             </div>
             <div className="col-12 col-md-6 d-none d-xs-none d-md-block">
-              <img src={hero} width="510" height="360" alt="Logo" />
+              <img src={hero} width="510" height="360" alt="Logo" className="hero" />
             </div>
           </div>
         </div>
@@ -154,23 +159,42 @@ export default function LandingPage() {
           Top Influencer
         </div>
         <div className="row gx-4 justify-content-center gy-md-3 gy-sm-3 gy-3">
-          { state.data !== undefined ?
-            state.data.slice(0,3).map((e)=> {return (
-              <Card key={e.id} top={true} nama={e.nama} jenis={e.kategori} fllwr={e.followers} src={e.img_profil} link={`/search-influence/${e.id}`}/>
-            )}) : <p>Loading...</p>
-          
-         }
+          {state.data !== undefined ? (
+            state.data.slice(0, 3).map((e) => {
+              return (
+                <Card
+                  key={e.id}
+                  top={true}
+                  nama={e.nama}
+                  jenis={e.kategori}
+                  fllwr={e.followers}
+                  src={e.img_profil}
+                  link={`/search-influence/${e.id}`}
+                />
+              );
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
 
       <div className="container my-5">
-        <div className="p-4 rounded letter mx-5" style={{backgroundColor: "violet"}}>
+        <div
+          className="p-4 rounded letter mx-5"
+          style={{ backgroundColor: "#fd9822" }}
+        >
           <div className="d-flex align-items-center justify-content-between">
             <div className="fw-bold">Langganan Pada Newsletter Kami</div>
             <div className="">
-              <button className="btn me-2 rounded-pill mainColor" type="button">
-                Daftar
-              </button>
+              <Link
+                to={isLogin === "true" ? "/" : "/daftar"}
+                className="btn me-2 rounded-pill fw-bolder"
+                style={{ color: "dark", backgroundColor: "whitesmoke" }}
+                type="button"
+              >
+                {isLogin === "true" ? "Sudah" : "Daftar"}
+              </Link>
             </div>
           </div>
         </div>
