@@ -7,6 +7,7 @@ import {VerticalBar} from "./ProfileComponent/VerticalBar";
 import CardInsight from "./ProfileComponent/CardInsight";
 import CardInfluence from "../Search-Influence/CardInfluence";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function InfluenceProfile(){
     const [error, setError] = useState(null)
@@ -80,7 +81,7 @@ export default function InfluenceProfile(){
                 <hr style={{color:"rgb(51,0,123)"}}/>
                     <h3 className="fw-bold">Data Insight</h3>
                 <div className="row-3 d-flex justify-content-center my-4">
-                    <div className="card p-4 col-4 me-3" >
+                    <div className="cardx p-4 col-4 me-3" >
                         <div className="d-flex justify-content-between py-3">
                             <div className="ms-4">
                                 <i class="fab fa-instagram fa-lg" style={{ color: "#B41A82" }}></i>
@@ -112,7 +113,7 @@ export default function InfluenceProfile(){
                                 </div>
                         </div>
                     </div>
-                    <div className="card p-4 col-4 me-3" >
+                    <div className="cardx p-4 col-4 me-3" >
                         <div className="d-flex justify-content-between py-3">
                             <div className="ms-4">
                                 <i class="fab fa-facebook fa-lg" style={{ color: "#486AA5" }}></i>
@@ -144,7 +145,7 @@ export default function InfluenceProfile(){
                                 </div>
                         </div>
                     </div>
-                    <div className="card p-4 col-4" >
+                    <div className="cardx p-4 col-4" >
                         <div className="d-flex justify-content-between py-3">
                             <div className="ms-4">
                                 <i class="fab fa-twitter fa-lg" style={{ color: "#29AAF3"}}></i>
@@ -199,7 +200,7 @@ export default function InfluenceProfile(){
                     <h3><strong>About</strong></h3>
                     <Row className=" mt-4 mb-4 g-4 justify-content-between">
                         <Col md={7}>
-                            <Card>
+                            {/* <Card> */}
                                 <Card.Body>
                                     <blockquote className="blockquote mb-0">
                                         <p className="text-start">
@@ -213,7 +214,7 @@ export default function InfluenceProfile(){
                                         </footer>
                                     </blockquote>
                                 </Card.Body>
-                            </Card>
+                            {/* </Card> */}
                         </Col>
                         <Col md = {5}>
                             <Card>
@@ -222,7 +223,10 @@ export default function InfluenceProfile(){
                                     <Card.Text>
                                         Apakah kamu sudah siap membuat produkmu menjadi terkenal bersama {detailInfluencer !== undefined? (detailInfluencer.nama) :null}
                                     </Card.Text>
-                                    <button style={{background:"darkviolet",color:"white",borderRadius:"10px", border:"2px solid white", padding:"8px 30px"}}>Daftar Sekarang</button>
+                                    <Link className='btn w-50 mt-2 mb-1' style={{ backgroundColor: "darkviolet", color: "white" }} to={`/form-pengajuan/:${idBaru}`}>
+                                        Daftar Sekarang
+                                    </Link>
+                                    
                                 </Card.Body>
                             </Card>
                         </Col>
