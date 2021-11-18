@@ -7,21 +7,37 @@ import Layouts from "../../Layout";
 
 const Login = () =>{
     const {register, handleSubmit, formState: {errors}} = useForm();
+    const [validator, setValidator] = React.useState(false)
     const navigate = useNavigate();
     const onSubmit = data => {
-        console.log(data);
-        localStorage.setItem("isLogin", true);
-        navigate("/")
+        let inputEmail = data.email;
+        let inputPassword = data.password;
+
+        const getData = JSON.parse(localStorage.getItem('data-daftar'));
+
+        if(getData !== null) {
+            if(inputEmail !== getData.email && inputPassword !== getData.password){
+                setValidator(true)
+            }
+        }   if(getData === null)
+            {setValidator(true)
+        } else {
+            localStorage.setItem("isLogin", true);
+            navigate("/")
+        }
     }
-    console.log(errors);
-    const getData = JSON.parse(localStorage.getItem('data'));
+    
     return(
         <Layouts>
-        <div className='form-container my-5'>
+        <div className='form-container my-5 py-5' style={{height:"700px"}}>
         <div className='form-content-right'>
         <div>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
                 <h1> Login </h1>
+                <div className={`alert alert-danger my-5 ${validator ? "d-block" : "d-none"}`} role="alert">
+                    Email atau Password tidak terdaftar
+                </div>
+
                  <div className="col-md-25">
                     <label htmlFor="email" className="form-label">Email</label>
                     <div class="input-group form-group">

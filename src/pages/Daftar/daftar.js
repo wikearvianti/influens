@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import "./daftar.css";
 import Layouts from "../../Layout";
 
@@ -11,7 +10,7 @@ const Daftar = () => {
     const onSubmit = data => {
         localStorage.setItem('data-daftar', JSON.stringify(data));
         console.log(data);
-        navigate("/")
+        navigate("/login")
     }
 
     const dataRegis = localStorage.getItem("data-daftar")
@@ -20,17 +19,15 @@ const Daftar = () => {
     console.log(errors);
     return (
         <Layouts>
-            <div className='form-container my-5 py-5' style={{height:"600px"}}>
-                <div className="">
+            <div className='form-container my-5 py-5' style={{height:"700px"}}>
+                <div className="g-3 row justify-content-center">
                     <form noValidate onSubmit={handleSubmit(onSubmit)}>
-                        <h1>
-                            Daftar
-                        </h1>
+                        <h1> Daftar </h1>
                         <div className="col-md-25">
                             <label htmlFor="username" className="form-label">Username</label>
                             <div class="input-group form-group ">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa-1x fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-user"style={{fontSize: "1.5em"}}></i></span>
                                 </div>
                                 <input
                                     type="username"
@@ -50,7 +47,7 @@ const Daftar = () => {
                             <label htmlFor="email" className="form-label">Email</label>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa-1x fa-envelope-square"></i></span>
+                                    <span class="input-group-text"><i class="far fa-envelope" style={{fontSize: "1.5em"}}></i></span>
                                 </div>
                                 <input
                                     type="email"
@@ -72,7 +69,7 @@ const Daftar = () => {
                             </label>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa-1x fa-briefcase"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-briefcase" style={{fontSize: "1.5em"}}></i></span>
                                 </div>
                                 <select
                                     className={
@@ -105,7 +102,7 @@ const Daftar = () => {
                             <label htmlFor="usaha" className="form-label">Nama Usaha</label>
                             <div class="input-group form-group ">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-user" style={{fontSize: "1.5em"}}></i></span>
                                 </div>
                                 <input
                                     type="usaha"
@@ -125,7 +122,7 @@ const Daftar = () => {
                             <label htmlFor="password" className="form-label">Password</label>
                             <div class="input-group form-group1">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa-1x fa-key"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-key" style={{fontSize: "1.5em"}}></i></span>
                                 </div>
                                 <input
                                     type="password"
