@@ -1,4 +1,4 @@
-import { Card,Button } from "react-bootstrap";
+/* eslint-disable jsx-a11y/alt-text */
 import { Link } from 'react-router-dom';
 import "./cardinfluence.css"
 
