@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import "./login.css";
 import Layouts from "../../Layout";
+import { Link } from "react-router-dom";
 
 const Login = () =>{
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -89,10 +90,10 @@ const Login = () =>{
                 Belum punya akun?
                 </p>
 
-                <a className="inline-block text-sm align-baseline"
-                href="./Daftar">
+                <Link className="inline-block text-sm align-baseline"
+                to="/daftar">
                     Daftar
-                </a>
+                </Link>
                 </div>
 
                 </form>
