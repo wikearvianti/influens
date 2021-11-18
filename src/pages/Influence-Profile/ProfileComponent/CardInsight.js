@@ -1,5 +1,3 @@
-import {Card} from "react-bootstrap"
-
 export default function CardInsight({logo,followers,likes,comments}){
     return (
         <div className="card col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 p-2 g-2 align-items-center" >
