@@ -1,17 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ReactLoading from "react-loading";
 import Layouts from "../../Layout";
 import "./profile.css";
 
 export default function Profile() {
   let historyData = JSON.parse(localStorage.getItem("history"));
   let userData = JSON.parse(localStorage.getItem("data-daftar"));
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
 
   return (
     <Layouts>
+      {isLoading ? (
+        <div className="loading">
+          <ReactLoading type="balls" color="#fd9822" />
+          <div className="fw-bolder">Loading</div>
+        </div>
+      ) : (
+        <>
       <img
         src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=874&q=80"
         class="img-fluid"
@@ -67,7 +79,8 @@ export default function Profile() {
             </div>
           </div>
         </div>
-      </div>
+      </div></>
+      )}
     </Layouts>
   );
 }

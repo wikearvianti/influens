@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate  } from "react-router-dom";
 import LandingPage from "../pages/Landing-Page/LandingPage"
 import FormPengajuan from "../pages/Form-Pengajuan/Form-pengajuan";
 import Profile from "../pages/Profile/Profile"
@@ -18,6 +18,7 @@ export default function Routers() {
             <Route path="/login" element={<Login/>} />
             <Route path='/search-influence/:idBaru' element={< InfluenceProfile/>} />
             <Route path="/search-influence" element={< SearchInfluencer/>} />
+            <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
     )
 }
