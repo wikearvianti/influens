@@ -63,7 +63,6 @@ export default function FormPengajuan() {
       ? state.data.find((x) => x.id === Number(id))
       : null;
 
-  console.log(getInfluencer);
 
   const [modal, setModal] = useState(false);
   const navigate = useNavigate();

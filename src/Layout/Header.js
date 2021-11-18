@@ -7,7 +7,6 @@ import "./styles/header.css";
 export default function Header(props) {
   const isLogin = localStorage.getItem("isLogin");
   let userData = JSON.parse(localStorage.getItem("data-daftar"));
-  console.log(isLogin);
   const navigate = useNavigate()
 
   const onSubmit = () => {
