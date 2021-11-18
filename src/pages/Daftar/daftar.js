@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 import "./daftar.css";
 import Layouts from "../../Layout";
 
@@ -20,7 +19,7 @@ const Daftar = () => {
     console.log(errors);
     return (
         <Layouts>
-            <div className='form-container my-5 py-5' style={{height:"700px"}}>
+            <div className='form-container my-5 py-5'>
                 <div className="g-3 row justify-content-center">
                     <form noValidate onSubmit={handleSubmit(onSubmit)}>
                         <h1> Daftar </h1>
@@ -139,11 +138,11 @@ const Daftar = () => {
                             </div>
                         </div>
 
-                        <div class="mb-5 text-center mt-3">
-                            <button className='form-input btn btn-primary' type="submit">
-                                Daftar
-                            </button>
-                        </div>
+                        <div className="mt-5 text-center d-grid "> 
+                         <button className='form-input btn btn-lg mainColor rounded-pill' type="submit">
+                             Daftar
+                         </button>
+                         </div>
                     </form>
                 </div>
             </div>

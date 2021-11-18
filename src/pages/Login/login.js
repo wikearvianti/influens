@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import "./login.css";
 import Layouts from "../../Layout";
 
@@ -15,21 +14,21 @@ const Login = () =>{
 
         const getData = JSON.parse(localStorage.getItem('data-daftar'));
 
-        if(getData !== null) {
-            if(inputEmail !== getData.email && inputPassword !== getData.password){
-                setValidator(true)
+        if (getData !== null) {
+            if (inputEmail !== getData.email || inputPassword !== getData.password) {
+              setValidator(true);
+            } else {
+              localStorage.setItem("isLogin", true);
+              navigate("/");
             }
-        }   if(getData === null)
-            {setValidator(true)
-        } else {
-            localStorage.setItem("isLogin", true);
-            navigate("/")
-        }
+          } else {
+            setValidator(true);
+          }
     }
     
     return(
         <Layouts>
-        <div className='form-container my-5 py-5' style={{height:"700px"}}>
+        <div className='form-container my-5 py-5'>
         <div className='form-content-right'>
         <div>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -79,8 +78,8 @@ const Login = () =>{
                 </div>
 
                 
-                <div className="mb-6 text-center"> 
-                <button className='form-input btn btn-primary' type="submit" Link to='/'>
+                <div className="mb-6 text-center d-grid"> 
+                <button className='form-input btn btn-lg mainColor rounded-pill' type="submit">
                     Login
                 </button>
                 </div>

@@ -2,7 +2,7 @@
   margin-bottom: 20px;
 }
 
-.form-container{
+.form-container{ 
   padding: 50px ;
   margin : 0px auto; 
   background-color: white;
@@ -11,6 +11,9 @@
   width: 100%; 
   position: relative;
   max-width: 550px;
+}  
+.btn {
+  background-color: darkviolet;
 }
 
 .form-container h1{
