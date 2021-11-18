@@ -15,8 +15,12 @@ const Login = () =>{
 
         const getData = JSON.parse(localStorage.getItem('data-daftar'));
 
-        if(inputEmail !== getData.email && inputPassword !== getData.password){
-            setValidator(true)
+        if(getData !== null) {
+            if(inputEmail !== getData.email && inputPassword !== getData.password){
+                setValidator(true)
+            }
+        }   if(getData === null)
+            {setValidator(true)
         } else {
             localStorage.setItem("isLogin", true);
             navigate("/")
