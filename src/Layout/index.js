@@ -4,9 +4,11 @@ import Footer from './footer'
 
 export default function Layouts({children}){
     return(
-        <div>
+        <div className="d-flex flex-column" style={{height: "100vh"}}>
             <Header />
-            {children}
+            <div>
+                {children}
+            </div>
             <Footer />
         </div>
     )

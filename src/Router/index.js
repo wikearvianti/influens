@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate  } from "react-router-dom";
 import LandingPage from "../pages/Landing-Page/LandingPage"
 import FormPengajuan from "../pages/Form-Pengajuan/Form-pengajuan";
 import Profile from "../pages/Profile/Profile"
@@ -11,13 +11,14 @@ export default function Routers() {
     
     return(
         <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/form-pengajuan/:idBaru" element={<FormPengajuan />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/daftar" element={<Daftar />} />
-            <Route path="/login" element={<Login/>} />
-             <Route path='/search-influence/:idBaru' element={< InfluenceProfile/>} />
-            <Route path="/search-influence" element={< SearchInfluencer/>} />
+            <Route exact path="/" element={<LandingPage />} />
+            <Route exact path="/form-pengajuan/:id" element={<FormPengajuan />} />
+            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/daftar" element={<Daftar />} />
+            <Route exact path="/login" element={<Login/>} />
+            <Route exact path='/search-influence/:idBaru' element={< InfluenceProfile/>} />
+            <Route exact path="/search-influence" element={< SearchInfluencer/>} />
+            <Route exact path="*" element={<Navigate replace to="/" />} />
         </Routes>
     )
 }
