@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import "../Login/login.css";
+import "./login.css";
 import Layouts from "../../Layout";
 
 const Login = () =>{
@@ -17,7 +17,7 @@ const Login = () =>{
     const getData = JSON.parse(localStorage.getItem('data'));
     return(
         <Layouts>
-        <div className='form-container'>
+        <div className='form-container my-5'>
         <div className='form-content-right'>
         <div>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -26,7 +26,7 @@ const Login = () =>{
                     <label htmlFor="email" className="form-label">Email</label>
                     <div class="input-group form-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa-1x fa-envelope-square"></i></span>
+                        <span class="input-group-text"><i class="far fa-envelope" style={{fontSize: "1.5em"}}></i></span>
                     </div>
                     <input
                     type="email"
@@ -46,7 +46,7 @@ const Login = () =>{
                     <label htmlFor="password" className="form-label">Password</label>
                     <div class="input-group form-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa-1x fa-key"></i></span>
+                        <span class="input-group-text"><i class="fas fa-key" style={{fontSize: "1.5em"}}></i></span>
                     </div>
                     <input
                     type="password"

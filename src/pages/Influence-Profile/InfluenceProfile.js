@@ -1,17 +1,21 @@
-import React, { useState,useEffect, version }from "react";
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useState,useEffect }from "react";
 import "./styles.css";
-import { Card,Row,Col,Button } from "react-bootstrap";
+import { Card,Row,Col } from "react-bootstrap";
 import Header from "../../Layout/Header"
 import Footer from "../../Layout/footer"
 import {VerticalBar} from "./ProfileComponent/VerticalBar";
-import CardInsight from "./ProfileComponent/CardInsight";
 import CardInfluence from "../Search-Influence/CardInfluence";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function InfluenceProfile(){
-    const [error, setError] = useState(null)
-    const [isLoaded, setIsLoaded] = useState(false)
+    const isLogin = localStorage.getItem("isLogin");
+    console.log(isLogin);
+    // eslint-disable-next-line
+    const [ error,setError] = useState(null)
+    // eslint-disable-next-line
+    const [ isLoaded,setIsLoaded] = useState(false)
     const [items, setItems] = useState([])
     useEffect(() => {
         fetch("https://my-json-server.typicode.com/dewimardanicristin/db-influence/influencer")
@@ -49,6 +53,7 @@ export default function InfluenceProfile(){
                         alt="First slide"
                     />
                 </div>
+
                 <div className="FotoProfile mb-lg-5" style={{margin:"0px 200px"}}>
                     <img className="rounded-circle"
                          src={detailInfluencer !== undefined? (detailInfluencer.img_profil) :null}
@@ -57,9 +62,9 @@ export default function InfluenceProfile(){
                 </div>
                 
             {/* </div>     */}
-            <div className="container">
-                <br/><br/>
-                <div className="mt-5">
+            <div className="container mt-md-5 mt-sm-0">
+                <br/><br/><br/><br/>
+                <div className="insight my-sm-5">
                     <div className="Caption mb-lg-5">
                         <div className="b1-caption d-flex justify-content-between">
                             <h4>
@@ -79,33 +84,33 @@ export default function InfluenceProfile(){
                     </div>
                 </div>  
                 <hr style={{color:"rgb(51,0,123)"}}/>
-                    <h3 className="fw-bold">Data Insight</h3>
-                <div className="row-3 d-flex justify-content-center my-4">
+                <h3 className="fw-bold">Data Insight</h3>
+                <div className="row-3 d-flex justify-content-center my-4 ">
                     <div className="cardx p-4 col-4 me-3" >
                         <div className="d-flex justify-content-between py-3">
-                            <div className="ms-4">
-                                <i class="fab fa-instagram fa-lg" style={{ color: "#B41A82" }}></i>
-                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            <div className="ms-4 d-flex">
+                                <i class="fab fa-instagram fa-lg me-1" style={{ color: "#B41A82" }}> </i>
+                                <strong className="d-lg-block d-sm-none" style={{color:"#272D4E"}}> Insight</strong>
                             </div>
-                            <div className="me-4">
-                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
-                                <strong>+11%</strong>
+                            <div className="me-4 d-flex " >
+                                <i class="fas fa-chart-line me-1 fa-lg" style={{ color: "#29AAF3" }}></i>
+                                <strong className="d-lg-block d-sm-none ">+11%</strong>
                             </div>
                         </div>
-                        <div className="d-flex justify-content-between">
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                        <div className="row d-lg-flex justify-content-between">
+                                <div className="col-lg-4">
                                     <div className="py-3">
                                         <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
                                         <h6 className="text-center">Followers </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4">
                                     <div className="py-3">
                                         <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
                                         <h6 className="text-center">Reactions </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4">
                                     <div className="py-3">
                                         <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
                                         <h6 className="text-center">Comments</h6>
@@ -115,31 +120,31 @@ export default function InfluenceProfile(){
                     </div>
                     <div className="cardx p-4 col-4 me-3" >
                         <div className="d-flex justify-content-between py-3">
-                            <div className="ms-4">
-                                <i class="fab fa-facebook fa-lg" style={{ color: "#486AA5" }}></i>
-                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            <div className="ms-4 d-flex">
+                                <i class="fab fa-facebook fa-lg me-1" style={{ color: "#1778F3" }}> </i>
+                                <strong className="d-lg-block d-sm-none" style={{color:"#272D4E"}}> Insight</strong>
                             </div>
-                            <div className="me-4">
-                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
-                                <strong>+11%</strong>
+                            <div className="me-4 d-flex " >
+                                <i class="fas fa-chart-line me-1 fa-lg" style={{ color: "#29AAF3" }}></i>
+                                <strong className="d-lg-block d-sm-none ">+11%</strong>
                             </div>
                         </div>
-                        <div className="d-flex justify-content-between">
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                        <div className="row-3 d-lg-flex justify-content-between">
+                                <div className="col-lg-4 col-md-12 col-sm-12">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersfacebook) : null}</h4>
                                         <h6 className="text-center">Followers </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4 col-md-12 col-sm-12">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesfacebook) : null}</h4>
                                         <h6 className="text-center">Reactions </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4 col-md-12 col-sm-12">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsfacebook) : null}</h4>
                                         <h6 className="text-center">Comments</h6>
                                     </div>
                                 </div>
@@ -147,31 +152,31 @@ export default function InfluenceProfile(){
                     </div>
                     <div className="cardx p-4 col-4" >
                         <div className="d-flex justify-content-between py-3">
-                            <div className="ms-4">
-                                <i class="fab fa-twitter fa-lg" style={{ color: "#29AAF3"}}></i>
-                                <strong style={{color:"#272D4E"}}> Insight</strong>
+                            <div className="ms-4 d-flex">
+                                <i class="fab fa-twitter fa-lg me-1" style={{ color: "#29AAF3" }}> </i>
+                                <strong className="d-lg-block d-sm-none" style={{color:"#272D4E"}}> Insight</strong>
                             </div>
-                            <div className="me-4">
-                                <i class="fas fa-chart-line" style={{ color: "#29AAF3" }}></i>
-                                <strong>+11%</strong>
+                            <div className="me-4 d-flex " >
+                                <i class="fas fa-chart-line me-1 fa-lg" style={{ color: "#29AAF3" }}></i>
+                                <strong className="d-lg-block d-sm-none ">+2.1%</strong>
                             </div>
                         </div>
-                        <div className="d-flex justify-content-between">
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                        <div className="row-3 d-lg-flex justify-content-between">
+                                <div className="col-lg-4">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followersinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.followerstwitter) : null}</h4>
                                         <h6 className="text-center">Followers </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likesinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.likestwitter) : null}</h4>
                                         <h6 className="text-center">Reactions </h6>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-3 col-sm-3">
+                                <div className="col-lg-4">
                                     <div className="py-3">
-                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentsinstagram) : null}</h4>
+                                        <h4 className="text-center fw-bold">{detailInfluencer !== undefined ? (detailInfluencer.insight.commentstwitter) : null}</h4>
                                         <h6 className="text-center">Comments</h6>
                                     </div>
                                 </div>
@@ -196,9 +201,9 @@ export default function InfluenceProfile(){
                     }
                 </div>
                 
-                <div className="about mt-4 mb-4">
+                <div className="about mb-4">
                     <h3><strong>About</strong></h3>
-                    <Row className=" mt-4 mb-4 g-4 justify-content-between">
+                    <Row className=" mb-4 g-4 justify-content-between">
                         <Col md={7}>
                             {/* <Card> */}
                                 <Card.Body>
@@ -223,7 +228,14 @@ export default function InfluenceProfile(){
                                     <Card.Text>
                                         Apakah kamu sudah siap membuat produkmu menjadi terkenal bersama {detailInfluencer !== undefined? (detailInfluencer.nama) :null}
                                     </Card.Text>
-                                    <Link className='btn w-50 mt-2 mb-1' style={{ backgroundColor: "darkviolet", color: "white" }} to={`/form-pengajuan`}>
+                                    <Link 
+                                        className='btn w-50 mt-2 mb-1' 
+                                        style={{ backgroundColor: "darkviolet", color: "white" }} 
+                                        to={isLogin === "true" ? `/form-pengajuan/${
+                                            detailInfluencer !== undefined
+                                              ? detailInfluencer.id
+                                              : null}` : '../login'
+                                          }>
                                         Daftar Sekarang
                                     </Link>
                                     
@@ -246,10 +258,11 @@ export default function InfluenceProfile(){
                         <h3>Lihat Influencer Lainnya yang Mungkin Anda Suka</h3>
                         <div className="row " key={items.id}>      
                                 {
-                                    items.slice(1,4).map((val)=>{
+                                    items.slice(1,4).map((val,index)=>{
                                         return(
                                             <div className="col-lg-4 col-md-6 col-sm-12 g-4" key={items.id}>
                                                 <CardInfluence 
+                                                    idBaru={index+2}
                                                     img={val.img_profil}
                                                     name={val.nama}
                                                     location={val.lokasi}
@@ -260,7 +273,7 @@ export default function InfluenceProfile(){
                                         )
                                     })
                                 }
-                         
+                            
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import {FormControl,Button,Dropdown,ButtonGroup,Card} from 'react-bootstrap'
+import {FormControl} from 'react-bootstrap'
 import Header from '../../Layout/Header'
 import React from 'react'
 import { useState,useEffect } from 'react'
@@ -8,7 +8,9 @@ import { useLocation } from "react-router-dom";
 
 
 export default function SearchInfluencer(){
+    // eslint-disable-next-line
     const [error, setError] = useState(null)
+    // eslint-disable-next-line
     const [isLoaded, setIsLoaded] = useState(false)
     const [items, setItems] = useState([])
     const [q, setQ] = useState("")
@@ -16,8 +18,8 @@ export default function SearchInfluencer(){
     const [filterParam, setFilterParam] = useState(["All"])
 
     let location = useLocation();
-    const qs = require('query-string');
-    const params = qs.parse(location.search);
+    // const qs = require('query-string');
+    // const params = qs.parse(location.search);
     console.log(location)
         useEffect(() => {
             fetch("https://my-json-server.typicode.com/dewimardanicristin/db-influence/influencer")
@@ -36,26 +38,28 @@ export default function SearchInfluencer(){
         
         function search(items) {
             return items.filter((item) => {
-                if (item.lokasi == filterParam || item.kategori == filterParam) {
-                    return searchParam.some((newItem) => {
-                        return (
-                            item[newItem]
-                                .toString()
-                                .toLowerCase()
-                                .indexOf(q.toLowerCase()) > -1
-                        );
-                    });
-                }else if (filterParam == "All") {
-                    return searchParam.some((newItem) => {
-                        return (
-                            item[newItem]
-                                .toString()
-                                .toLowerCase()
-                                .indexOf(q.toLowerCase()) > -1
-                        );
-                    });
-                }
-            });
+                    // eslint-disable-next-line eqeqeq
+                    if (item.lokasi == filterParam || item.kategori == filterParam) {
+                        return searchParam.some((newItem) => {
+                            return (
+                                item[newItem]
+                                    .toString()
+                                    .toLowerCase()
+                                    .indexOf(q.toLowerCase()) > -1
+                            )
+                        })
+                        // eslint-disable-next-line eqeqeq
+                    } else if (filterParam == "All") {
+                        return searchParam.some((newItem) => {
+                            return (
+                                item[newItem]
+                                    .toString()
+                                    .toLowerCase()
+                                    .indexOf(q.toLowerCase()) > -1
+                            )
+                        })
+                    }
+                });
         }
 
     return(
@@ -67,7 +71,7 @@ export default function SearchInfluencer(){
                         <FormControl
                             type="search"
                             placeholder="Search"
-                            className="me-2"
+                            className="formcontrol me-2"
                             aria-label="Search"
                             value={q}
                             onChange={(e) => setQ(e.target.value)}
@@ -75,7 +79,7 @@ export default function SearchInfluencer(){
                         />
                     </div>
                 </div>
-                    <aside className="d-block p-4 mt-4 me-4 mb-5" style={{ float: "left",boxShadow: "0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06)",borderRadius:"10px"}}>
+                    <aside className="d-block p-4 mt-4 me-4 mb-5 d-lg-block d-sm-none" style={{ float: "left",boxShadow: "0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06)",borderRadius:"10px"}}>
 
                     <h6 className="fw-bold" >Filter Influencer Favoritemu</h6>
                     <div className="select">
@@ -87,7 +91,7 @@ export default function SearchInfluencer(){
                             style={{border:"1px solid rgb(51,0,123)",color:"#444444"}}
                             
                         >
-                            <option value="All">Filter By Lokasi</option>
+                            <option value="All"disabled>Filter By Lokasi</option>
                             <option value="DKI Jakarta">DKI Jakarta</option>
                             <option value="Jawa Barat">Jawa Barat</option>
                         </select>
@@ -101,7 +105,7 @@ export default function SearchInfluencer(){
                             className="custom-select m-auto w-100 mb-3" 
                             style={{border:"1px solid rgb(51,0,123)",color:"#444444"}}
                         >
-                            <option value="All">Filter By Kategori</option>
+                            <option value="All" disabled>Filter By Kategori</option>
                             <option value="Beauty Influencer">Beauty Influencer</option>
                             <option value="Food Vlogger">Food Vlogger</option>
                             <option value="Pendidikan">Pendidikan</option>
