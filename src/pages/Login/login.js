@@ -2,31 +2,43 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import "../Login/login.css";
+import "./login.css";
 import Layouts from "../../Layout";
 
 const Login = () =>{
     const {register, handleSubmit, formState: {errors}} = useForm();
+    const [validator, setValidator] = React.useState(false)
     const navigate = useNavigate();
     const onSubmit = data => {
-        console.log(data);
-        localStorage.setItem("isLogin", true);
-        navigate("/")
+        let inputEmail = data.email;
+        let inputPassword = data.password;
+
+        const getData = JSON.parse(localStorage.getItem('data-daftar'));
+
+        if(inputEmail !== getData.email && inputPassword !== getData.password){
+            setValidator(true)
+        } else {
+            localStorage.setItem("isLogin", true);
+            navigate("/")
+        }
     }
-    console.log(errors);
-    const getData = JSON.parse(localStorage.getItem('data'));
+    
     return(
         <Layouts>
-        <div className='form-container'>
+        <div className='form-container my-5 py-5' style={{height:"700px"}}>
         <div className='form-content-right'>
         <div>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
                 <h1> Login </h1>
+                <div className={`alert alert-danger my-5 ${validator ? "d-block" : "d-none"}`} role="alert">
+                    Email atau Password tidak terdaftar
+                </div>
+
                  <div className="col-md-25">
                     <label htmlFor="email" className="form-label">Email</label>
                     <div class="input-group form-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa-1x fa-envelope-square"></i></span>
+                        <span class="input-group-text"><i class="far fa-envelope" style={{fontSize: "1.5em"}}></i></span>
                     </div>
                     <input
                     type="email"
@@ -46,7 +58,7 @@ const Login = () =>{
                     <label htmlFor="password" className="form-label">Password</label>
                     <div class="input-group form-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa-1x fa-key"></i></span>
+                        <span class="input-group-text"><i class="fas fa-key" style={{fontSize: "1.5em"}}></i></span>
                     </div>
                     <input
                     type="password"
