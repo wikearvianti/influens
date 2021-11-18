@@ -12,9 +12,7 @@
   position: relative;
   max-width: 550px;
 }
-.btn {
-  background-color: darkviolet;
-}
+
 .form-container h1{
   text-align: center;
   margin : 0px auto; 
